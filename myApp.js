@@ -20,7 +20,7 @@ const createAndSavePerson = (done) => {
 
   johnDoe.save(function (err, data) {
     if (err) return console.error(err);
-    done(null /*, data*/);
+    done(null, data);
   });
 };
 

@@ -24,10 +24,11 @@ const createAndSavePerson = (done) => {
   });
 };
 
+var arrayOfPeople = [{ name: 'Joseph M Goodman', age: 74, favoriteFoods: ['Tex Mex'] },
+                 { name: 'Norman D Cutter', age: 52, favoriteFoods: ['Fish & chips'] },
+];
+
 const createManyPeople = (arrayOfPeople, done) => {
-  arrayOfPeople = [{ name: 'Joseph M Goodman', age: 74, favoriteFoods: ['Tex Mex'] },
-                   { name: 'Norman D Cutter', age: 52, favoriteFoods: ['Fish & chips'] },
-  ];
   Person.create(arrayOfPeople, function (err, people) {
     if (err) return console.error(err);
     done(null, people);
